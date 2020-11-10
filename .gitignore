@@ -19,7 +19,6 @@ README1.MD
 *.yaml
 .git
 .vscode
-/bootstrap/cache
 /img
 bak.yml
 /tests/Browser/console/*
