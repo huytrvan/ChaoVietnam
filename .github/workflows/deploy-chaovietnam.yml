@@ -1,0 +1,29 @@
+name: deploy-chaovietnam
+
+on:
+  push: 
+    branches: [ master ]
+  
+jobs:
+  deploy-chaovietnam:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
+
+      - name: Wait For Tests
+        uses: lewagon/wait-on-check-action@v0.1
+        with:
+          ref: master
+          check-name: test-chaovietnam
+          repo-token: ${{ secrets.REPO_TOKEN }}
+          wait-interval: 15
+      
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1 
+        with:
+          ftp-server: ftp://${{ secrets.HOST_NAME }}
+          ftp-username: ${{ secrets.USERNAME }}
+          ftp-password: ${{ secrets.PASSWORD }}

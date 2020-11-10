@@ -1,0 +1,128 @@
+ input,
+ textarea,
+ button,
+ .editable,
+ th,
+ td {
+     /* border-width: 1px; */
+     outline: none !important;
+     touch-action: manipulation;
+ }
+
+ .mt-1\/8 {
+     margin-top: 12.5%;
+ }
+
+ @media(min-width: 640px) {
+     .sm\:mt-1\/9 {
+         margin-top: 11%;
+     }
+ }
+
+ .pb-50 {
+     padding-bottom: 12.5rem;
+ }
+
+ .dz-image img {
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+ }
+
+ /*
+label {
+    color: rgba(0, 0, 0, 0.618);
+    letter-spacing: -0.005rem;
+}
+
+input,
+textarea,
+body {
+    color: rgba(0, 0, 0, 0.732);
+    letter-spacing: 0.005rem;
+}
+
+.z-full {
+    z-index: 9999;
+} */
+
+ /* 
+a {
+    text-decoration: underline;
+} */
+
+ .my-grid-template {
+     grid-template-columns: 61.8% auto;
+ }
+
+ @media (max-width: 640px) {
+     .my-h {
+         height: 61.8vw;
+     }
+ }
+
+ .my-dropzone {
+     border-width: 1px !important;
+     border-color: rgba(132, 225, 188) !important;
+     border-style: dashed !important;
+ }
+
+ .dropzone {
+     border-width: 0 !important;
+ }
+
+ .dz-image {
+     border-radius: 0.5rem !important;
+ }
+
+ .w-120 {
+     width: 30rem;
+ }
+
+ .shadow-out {
+     box-shadow: 0px 2.07px 6.18px 0px rgba(0, 0, 0, 0.207);
+ }
+
+ .shadow-in:hover,
+ .shadow-in-button:active {
+     box-shadow: inset 0px 0.5px 1.18px 1.18px rgba(0, 0, 0, 0.118);
+     /* box-shadow: inset 0px 4.14px 1.18px -2.07px rgba(0, 0, 0, 0.118) */
+ }
+
+ .shadow-in-button {
+     /* box-shadow: inset 0px 0.5px 1.18px 1.18px rgba(0, 0, 0, 0.118); */
+     box-shadow: inset 0px 0.5px 0px 0px rgba(255, 255, 255, 0.5);
+     /* background: rgb(28, 100, 242);
+background: linear-gradient(0deg, rgba(28, 100, 242, 1) 0%, rgba(63, 131, 248, 1) 100%); */
+ }
+
+ @media (min-width: 640px) {
+     .w-r204 {
+         max-width: 27.2rem;
+     }
+ }
+
+ /* */
+
+ .my-form-input {
+     border-color: rgba(0, 0, 0, 0.207);
+ }
+
+ /* .my-form-input:hover,
+.my-form-input:focus {
+    border-color: rgba(0, 0, 0, 0.414); */
+ /* } */
+
+ .bg-primary {
+     background-color: #FFDC40;
+ }
+
+ .bg-secondary {
+     background-color: #B3961B;
+ }
+
+ text-primary {
+     color: #46FFF3;
+ }
+
+ /* <div class=""><a href="#"class="block text-blue-500 underline">Edit Profile</a><a href="#"class="block text-blue-500 underline">Change password</a></div> */

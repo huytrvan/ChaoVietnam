@@ -1,0 +1,29 @@
+name: test-chaovietnam
+
+on: push
+
+jobs:
+  test-chaovietnam:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Create Database
+        run: |
+          sudo systemctl start mysql
+          mysql --user="root" --password="root" -e 'CREATE DATABASE IF NOT EXISTS test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;'
+      
+      - name: Install Composer dependencies
+        run: composer install --no-scripts --no-progress
+      
+      - name: Prepare Laravel
+        run: |
+          cp .env.ci .env
+          php artisan key:generate
+          php artisan migrate --env=testing
+
+      - name: Run tests
+        run: vendor/bin/phpunit tests/
